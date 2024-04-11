@@ -1,0 +1,20 @@
+name: Python App CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+    - uses: actions/setup-python@v1
+      with:
+        python-version: 3.11
+    - name: Install Dependencies
+      run: |
+        make install
+    - name: Pylint
+      run: |
+        make lint
+    - name: Test
+      run: |
+        make test
