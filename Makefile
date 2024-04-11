@@ -9,4 +9,4 @@ format:
 	black *.py
 
 test:
-	python -m pytest --vv --cov=app test_app.py
+	python -m pytest test_app.py
