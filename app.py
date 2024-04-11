@@ -1,14 +1,11 @@
 """
-Code to test Continuous Integration using Github Actions
+Fast API APP
 """
-import time
+from fastapi import FastAPI
 
-def app():
-    """Test App"""
-    print("App is running")
-    time.sleep(2)
-    print("App execution is completed")
-    return True
+app = FastAPI()
 
-if __name__=="__main__":
-    assert app() is True
+@app.get('/health')
+def health():
+    '''Checks the health of the App'''
+    return {"detail":"Success"}
