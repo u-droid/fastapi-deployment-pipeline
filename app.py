@@ -7,7 +7,7 @@ def app():
     try:
         """Test App"""
         print("App is running")
-        time.sleep(5)
+        time.sleep(2)
         print("App execution is completed")
         return True
     except Exception as e:
