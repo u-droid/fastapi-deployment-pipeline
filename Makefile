@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	pylint app.py
+	pylint app/main.py
 
 format:
 	black *.py
