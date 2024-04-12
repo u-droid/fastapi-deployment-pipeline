@@ -2,9 +2,10 @@ name: Python App CI
 
 on:
   push:
-    - "app/**"
-  branches:
-    - main
+    # paths:
+    #   - "app/**"
+    branches:
+      - main
 
 env:
   ECR_BACKEND_IMAGE: ${{ vars.ECR_BACKEND_IMAGE }}
